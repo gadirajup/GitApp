@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		A41416D92419AAF800830B6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41416D82419AAF800830B6D /* AppDelegate.swift */; };
 		A41416DB2419AAF800830B6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41416DA2419AAF800830B6D /* SceneDelegate.swift */; };
-		A41416DD2419AAF800830B6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41416DC2419AAF800830B6D /* ViewController.swift */; };
 		A41416E32419AAF800830B6D /* GitApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A41416E12419AAF800830B6D /* GitApp.xcdatamodeld */; };
 		A41416E52419AAF900830B6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A41416E42419AAF900830B6D /* Assets.xcassets */; };
 		A41416F32419AAF900830B6D /* GitAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41416F22419AAF900830B6D /* GitAppTests.swift */; };
 		A41416FE2419AAF900830B6D /* GitAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41416FD2419AAF900830B6D /* GitAppUITests.swift */; };
 		A414170C2419AB2700830B6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A414170B2419AB2700830B6D /* LaunchScreen.storyboard */; };
+		A414170E2419AF9900830B6D /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A414170D2419AF9900830B6D /* SearchVC.swift */; };
+		A41417102419AF9F00830B6D /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A414170F2419AF9F00830B6D /* FavoritesVC.swift */; };
+		A41417122419B38900830B6D /* GAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41417112419B38900830B6D /* GAButton.swift */; };
+		A41417142419B58600830B6D /* GATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41417132419B58600830B6D /* GATextField.swift */; };
+		A41417162419B7EB00830B6D /* GAImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41417152419B7EB00830B6D /* GAImageView.swift */; };
+		A41417182419C16C00830B6D /* FollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41417172419C16C00830B6D /* FollowersListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,6 @@
 		A41416D52419AAF800830B6D /* GitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41416D82419AAF800830B6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A41416DA2419AAF800830B6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A41416DC2419AAF800830B6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A41416E22419AAF800830B6D /* GitApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GitApp.xcdatamodel; sourceTree = "<group>"; };
 		A41416E42419AAF900830B6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A41416E92419AAF900830B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +53,12 @@
 		A41416FD2419AAF900830B6D /* GitAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitAppUITests.swift; sourceTree = "<group>"; };
 		A41416FF2419AAF900830B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A414170B2419AB2700830B6D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A414170D2419AF9900830B6D /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		A414170F2419AF9F00830B6D /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
+		A41417112419B38900830B6D /* GAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAButton.swift; sourceTree = "<group>"; };
+		A41417132419B58600830B6D /* GATextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GATextField.swift; sourceTree = "<group>"; };
+		A41417152419B7EB00830B6D /* GAImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAImageView.swift; sourceTree = "<group>"; };
+		A41417172419C16C00830B6D /* FollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +111,12 @@
 			children = (
 				A41416D82419AAF800830B6D /* AppDelegate.swift */,
 				A41416DA2419AAF800830B6D /* SceneDelegate.swift */,
-				A41416DC2419AAF800830B6D /* ViewController.swift */,
+				A414170D2419AF9900830B6D /* SearchVC.swift */,
+				A414170F2419AF9F00830B6D /* FavoritesVC.swift */,
+				A41417172419C16C00830B6D /* FollowersListVC.swift */,
+				A41417112419B38900830B6D /* GAButton.swift */,
+				A41417132419B58600830B6D /* GATextField.swift */,
+				A41417152419B7EB00830B6D /* GAImageView.swift */,
 				A41416E42419AAF900830B6D /* Assets.xcassets */,
 				A414170B2419AB2700830B6D /* LaunchScreen.storyboard */,
 				A41416E92419AAF900830B6D /* Info.plist */,
@@ -258,10 +273,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A41417102419AF9F00830B6D /* FavoritesVC.swift in Sources */,
+				A414170E2419AF9900830B6D /* SearchVC.swift in Sources */,
+				A41417162419B7EB00830B6D /* GAImageView.swift in Sources */,
 				A41416E32419AAF800830B6D /* GitApp.xcdatamodeld in Sources */,
-				A41416DD2419AAF800830B6D /* ViewController.swift in Sources */,
 				A41416D92419AAF800830B6D /* AppDelegate.swift in Sources */,
+				A41417142419B58600830B6D /* GATextField.swift in Sources */,
 				A41416DB2419AAF800830B6D /* SceneDelegate.swift in Sources */,
+				A41417182419C16C00830B6D /* FollowersListVC.swift in Sources */,
+				A41417122419B38900830B6D /* GAButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
