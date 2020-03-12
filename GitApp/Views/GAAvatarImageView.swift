@@ -9,8 +9,8 @@
 import UIKit
 
 class GAAvatarImageView: GANetworkImageView {
-    override func setupView(url: String) {
-        super.setupView(url: url)
+    override func setupView() {
+        super.setupView()
         layer.cornerRadius = 10
     }
 }

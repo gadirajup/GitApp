@@ -6,7 +6,7 @@
 //  Copyright © 2020 Prudhvi Gadiraju. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class NetworkManger {
     
@@ -16,6 +16,7 @@ class NetworkManger {
         case ServerError
         case DataError
         case DecodingError
+        case ImageError
         
         var title: String {
             switch self {
@@ -29,6 +30,8 @@ class NetworkManger {
                 return "Data Error"
             case .DecodingError:
                 return "Decoding Error"
+            case .ImageError:
+                return "Image Error"
             }
         }
         
@@ -44,13 +47,17 @@ class NetworkManger {
                 return "Looks like the data is missing. oops!"
             case .DecodingError:
                 return "Failed to Decode the response into your model"
+            case .ImageError:
+                return "Failed to convert to data to UIImage"
             }
         }
     }
     
     static let shared = NetworkManger()
     
-    let baseUrl = "https://api.github.com"
+    private let baseUrl = "https://api.github.com"
+    
+    let cache = NSCache<NSString, UIImage>()
     
     private init() {}
     
@@ -92,4 +99,45 @@ class NetworkManger {
         
         task.resume()
     }
+    
+    func getImage(from urlString: String, completion: @escaping (Result<UIImage, NetworkError>) -> ()) {
+        
+        if let image = cache.object(forKey: NSString(string: urlString)) {
+            completion(.success(image))
+            return
+        }
+        
+        guard let url = URL(string: urlString) else {
+            completion(.failure(.URLError))
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            if let _ = error {
+                completion(.failure(.NetworkError))
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completion(.failure(.ServerError))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(.DataError))
+                return
+            }
+
+            if let image = UIImage(data: data) {
+                self.cache.setObject(image, forKey: NSString(string: urlString))
+                DispatchQueue.main.async { completion(.success(image)) }
+            } else {
+                completion(.failure(.ImageError))
+            }
+        }
+        
+        task.resume()
+    }
+    
 }

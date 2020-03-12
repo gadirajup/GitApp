@@ -15,7 +15,7 @@ class FollowerCell: UICollectionViewCell {
     private let paddingM: CGFloat = 12
     private let labelHeight: CGFloat = 20
 
-    private let avatarImageView = GAAvatarImageView(url: "")
+    private let avatarImageView = GAAvatarImageView()
     private let usernameLabel = GATitleLabel(textAlignment: .center, fontSize: 16)
     
     override init(frame: CGRect) {
@@ -30,6 +30,7 @@ class FollowerCell: UICollectionViewCell {
     
     func set(follower: Follower) {
         usernameLabel.text = follower.login
+        avatarImageView.set(image: follower.avatarUrl)
     }
     
     private func setupView() {
