@@ -9,9 +9,9 @@
 import UIKit
 
 class GAImageView: UIImageView {
+    
     init(image: String) {
         super.init(frame: .zero)
-        
         setupView(image: image)
     }
     
@@ -20,7 +20,7 @@ class GAImageView: UIImageView {
     }
     
     private func setupView(image: String) {
-        translatesAutoresizingMaskIntoConstraints = false
         self.image = UIImage(named: image)
+        translatesAutoresizingMaskIntoConstraints = false
     }
 }
