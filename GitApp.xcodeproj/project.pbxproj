@@ -10,7 +10,6 @@
 		A41416D92419AAF800830B6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41416D82419AAF800830B6D /* AppDelegate.swift */; };
 		A41416DB2419AAF800830B6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41416DA2419AAF800830B6D /* SceneDelegate.swift */; };
 		A41416E32419AAF800830B6D /* GitApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A41416E12419AAF800830B6D /* GitApp.xcdatamodeld */; };
-		A41416E52419AAF900830B6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A41416E42419AAF900830B6D /* Assets.xcassets */; };
 		A41416F32419AAF900830B6D /* GitAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41416F22419AAF900830B6D /* GitAppTests.swift */; };
 		A41416FE2419AAF900830B6D /* GitAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41416FD2419AAF900830B6D /* GitAppUITests.swift */; };
 		A414170C2419AB2700830B6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A414170B2419AB2700830B6D /* LaunchScreen.storyboard */; };
@@ -20,6 +19,12 @@
 		A41417142419B58600830B6D /* GATextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41417132419B58600830B6D /* GATextField.swift */; };
 		A41417162419B7EB00830B6D /* GAImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41417152419B7EB00830B6D /* GAImageView.swift */; };
 		A41417182419C16C00830B6D /* FollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41417172419C16C00830B6D /* FollowersListVC.swift */; };
+		A414171A2419C7B400830B6D /* GATitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41417192419C7B400830B6D /* GATitleLabel.swift */; };
+		A414171C2419C85F00830B6D /* GABodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A414171B2419C85F00830B6D /* GABodyLabel.swift */; };
+		A414171E2419C8D700830B6D /* GAAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A414171D2419C8D700830B6D /* GAAlertController.swift */; };
+		A41417202419CA8600830B6D /* GAContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A414171F2419CA8600830B6D /* GAContainerView.swift */; };
+		A41417222419CED100830B6D /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41417212419CED100830B6D /* UIViewController+Alert.swift */; };
+		A469B15A2419D3C200C1D53A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A469B1592419D3C200C1D53A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +49,6 @@
 		A41416D82419AAF800830B6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A41416DA2419AAF800830B6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A41416E22419AAF800830B6D /* GitApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GitApp.xcdatamodel; sourceTree = "<group>"; };
-		A41416E42419AAF900830B6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A41416E92419AAF900830B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A41416EE2419AAF900830B6D /* GitAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41416F22419AAF900830B6D /* GitAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitAppTests.swift; sourceTree = "<group>"; };
@@ -59,6 +63,12 @@
 		A41417132419B58600830B6D /* GATextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GATextField.swift; sourceTree = "<group>"; };
 		A41417152419B7EB00830B6D /* GAImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAImageView.swift; sourceTree = "<group>"; };
 		A41417172419C16C00830B6D /* FollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVC.swift; sourceTree = "<group>"; };
+		A41417192419C7B400830B6D /* GATitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GATitleLabel.swift; sourceTree = "<group>"; };
+		A414171B2419C85F00830B6D /* GABodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GABodyLabel.swift; sourceTree = "<group>"; };
+		A414171D2419C8D700830B6D /* GAAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAAlertController.swift; sourceTree = "<group>"; };
+		A414171F2419CA8600830B6D /* GAContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAContainerView.swift; sourceTree = "<group>"; };
+		A41417212419CED100830B6D /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		A469B1592419D3C200C1D53A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,18 +119,13 @@
 		A41416D72419AAF800830B6D /* GitApp */ = {
 			isa = PBXGroup;
 			children = (
-				A41416D82419AAF800830B6D /* AppDelegate.swift */,
-				A41416DA2419AAF800830B6D /* SceneDelegate.swift */,
-				A414170D2419AF9900830B6D /* SearchVC.swift */,
-				A414170F2419AF9F00830B6D /* FavoritesVC.swift */,
-				A41417172419C16C00830B6D /* FollowersListVC.swift */,
-				A41417112419B38900830B6D /* GAButton.swift */,
-				A41417132419B58600830B6D /* GATextField.swift */,
-				A41417152419B7EB00830B6D /* GAImageView.swift */,
-				A41416E42419AAF900830B6D /* Assets.xcassets */,
-				A414170B2419AB2700830B6D /* LaunchScreen.storyboard */,
-				A41416E92419AAF900830B6D /* Info.plist */,
-				A41416E12419AAF800830B6D /* GitApp.xcdatamodeld */,
+				A41417272419D21E00830B6D /* Models */,
+				A41417232419D17A00830B6D /* Views */,
+				A41417252419D1BE00830B6D /* Controllers */,
+				A41417262419D20700830B6D /* Components */,
+				A41417242419D18A00830B6D /* Extensions */,
+				A41417282419D23200830B6D /* Support */,
+				A41417292419D25300830B6D /* Resources */,
 			);
 			path = GitApp;
 			sourceTree = "<group>";
@@ -141,6 +146,72 @@
 				A41416FF2419AAF900830B6D /* Info.plist */,
 			);
 			path = GitAppUITests;
+			sourceTree = "<group>";
+		};
+		A41417232419D17A00830B6D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A41417112419B38900830B6D /* GAButton.swift */,
+				A41417132419B58600830B6D /* GATextField.swift */,
+				A41417152419B7EB00830B6D /* GAImageView.swift */,
+				A41417192419C7B400830B6D /* GATitleLabel.swift */,
+				A414171B2419C85F00830B6D /* GABodyLabel.swift */,
+				A414171F2419CA8600830B6D /* GAContainerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A41417242419D18A00830B6D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A41417212419CED100830B6D /* UIViewController+Alert.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A41417252419D1BE00830B6D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A414170D2419AF9900830B6D /* SearchVC.swift */,
+				A414170F2419AF9F00830B6D /* FavoritesVC.swift */,
+				A41417172419C16C00830B6D /* FollowersListVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A41417262419D20700830B6D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A414171D2419C8D700830B6D /* GAAlertController.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A41417272419D21E00830B6D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A41416E12419AAF800830B6D /* GitApp.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A41417282419D23200830B6D /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A41416D82419AAF800830B6D /* AppDelegate.swift */,
+				A41416DA2419AAF800830B6D /* SceneDelegate.swift */,
+				A414170B2419AB2700830B6D /* LaunchScreen.storyboard */,
+				A41416E92419AAF900830B6D /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		A41417292419D25300830B6D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A469B1592419D3C200C1D53A /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,8 +318,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A469B15A2419D3C200C1D53A /* Assets.xcassets in Resources */,
 				A414170C2419AB2700830B6D /* LaunchScreen.storyboard in Resources */,
-				A41416E52419AAF900830B6D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,14 +345,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				A41417102419AF9F00830B6D /* FavoritesVC.swift in Sources */,
+				A41417202419CA8600830B6D /* GAContainerView.swift in Sources */,
 				A414170E2419AF9900830B6D /* SearchVC.swift in Sources */,
+				A414171C2419C85F00830B6D /* GABodyLabel.swift in Sources */,
 				A41417162419B7EB00830B6D /* GAImageView.swift in Sources */,
+				A414171A2419C7B400830B6D /* GATitleLabel.swift in Sources */,
 				A41416E32419AAF800830B6D /* GitApp.xcdatamodeld in Sources */,
 				A41416D92419AAF800830B6D /* AppDelegate.swift in Sources */,
 				A41417142419B58600830B6D /* GATextField.swift in Sources */,
 				A41416DB2419AAF800830B6D /* SceneDelegate.swift in Sources */,
 				A41417182419C16C00830B6D /* FollowersListVC.swift in Sources */,
+				A414171E2419C8D700830B6D /* GAAlertController.swift in Sources */,
 				A41417122419B38900830B6D /* GAButton.swift in Sources */,
+				A41417222419CED100830B6D /* UIViewController+Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +513,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4479HNAQMJ;
-				INFOPLIST_FILE = GitApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GitApp/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,7 +531,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4479HNAQMJ;
-				INFOPLIST_FILE = GitApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GitApp/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
