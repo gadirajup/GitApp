@@ -27,6 +27,11 @@ class SearchVC: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        view.endEditing(true)
+    }
+    
     @objc private func pushFollowerListVC() {
         guard enteredUsername else {
             presentGAAlert(title: "Empty Username", message: "Please enter something in the search field", buttonText: "Ok")

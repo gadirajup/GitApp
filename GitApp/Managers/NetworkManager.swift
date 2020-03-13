@@ -65,24 +65,24 @@ class NetworkManger {
         let endpoint = baseUrl + "/users/\(username)/followers?per_page=100&page=\(page)"
         
         guard let url = URL(string: endpoint) else {
-            completion(.failure(.URLError))
+            DispatchQueue.main.async { completion(.failure(.URLError)) }
             return
         }
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             
             if let _ = error {
-                completion(.failure(.NetworkError))
+                DispatchQueue.main.async { completion(.failure(.NetworkError)) }
                 return
             }
             
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completion(.failure(.ServerError))
+                DispatchQueue.main.async { completion(.failure(.ServerError)) }
                 return
             }
             
             guard let data = data else {
-                completion(.failure(.DataError))
+                DispatchQueue.main.async { completion(.failure(.DataError)) }
                 return
             }
             
@@ -90,9 +90,9 @@ class NetworkManger {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let followers = try decoder.decode([Follower].self, from: data)
-                completion(.success(followers))
+                DispatchQueue.main.async { completion(.success(followers)) }
             } catch {
-                completion(.failure(.DecodingError))
+                DispatchQueue.main.async { completion(.failure(.DecodingError)) }
             }
             
         }
@@ -103,29 +103,29 @@ class NetworkManger {
     func getImage(from urlString: String, completion: @escaping (Result<UIImage, NetworkError>) -> ()) {
         
         if let image = cache.object(forKey: NSString(string: urlString)) {
-            completion(.success(image))
+            DispatchQueue.main.async { completion(.success(image)) }
             return
         }
         
         guard let url = URL(string: urlString) else {
-            completion(.failure(.URLError))
+            DispatchQueue.main.async { completion(.failure(.URLError)) }
             return
         }
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             
             if let _ = error {
-                completion(.failure(.NetworkError))
+                DispatchQueue.main.async { completion(.failure(.NetworkError)) }
                 return
             }
             
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completion(.failure(.ServerError))
+                DispatchQueue.main.async { completion(.failure(.ServerError)) }
                 return
             }
             
             guard let data = data else {
-                completion(.failure(.DataError))
+                DispatchQueue.main.async { completion(.failure(.DataError)) }
                 return
             }
 
@@ -133,7 +133,7 @@ class NetworkManger {
                 self.cache.setObject(image, forKey: NSString(string: urlString))
                 DispatchQueue.main.async { completion(.success(image)) }
             } else {
-                completion(.failure(.ImageError))
+                DispatchQueue.main.async { completion(.failure(.ImageError)) }
             }
         }
         

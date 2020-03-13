@@ -13,6 +13,8 @@ class FollowersListVC: UIViewController {
     enum Section { case main }
     
     var username: String?
+    var page: Int = 1
+    var hasMoreFollowers: Bool = true
     var followers: [Follower] = [] { didSet { updateData() }}
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
@@ -20,7 +22,7 @@ class FollowersListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        getFollowers()
+        getFollowers(in: page)
         setupDatasource()
     }
     
@@ -29,12 +31,17 @@ class FollowersListVC: UIViewController {
         setupNavBar()
     }
     
-    private func getFollowers() {
+    private func getFollowers(in page: Int) {
         guard let username = username else { return }
-        NetworkManger.shared.getFollowers(for: username, page: 1) { [weak self] result in
+        showLoadingView()
+        NetworkManger.shared.getFollowers(for: username, page: page) { [weak self] result in
             guard let self = self else { return }
+            self.hideLoadingView()
             switch result {
-            case .success(let followers):   self.followers = followers
+            case .success(let followers):
+                self.followers.append(contentsOf: followers)
+                if followers.count < 100 { self.hasMoreFollowers = false }
+                if followers.isEmpty { self.showEmptyStateView(with: "This user has no followers. Maybe follow them?", in: self.view) }
             case .failure(let error):       self.presentGAAlert(title: error.title, message: error.localizedDescription, buttonText: "Ok")
             }
         }
@@ -68,7 +75,22 @@ class FollowersListVC: UIViewController {
     private func setupCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createThreeColumnFlowLayout())
         collectionView.backgroundColor = .systemBackground
+        collectionView.delegate = self
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
         view.addSubview(collectionView)
+    }
+}
+
+extension FollowersListVC: UICollectionViewDelegate {
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.size.height
+        
+        if offsetY > contentHeight - height {
+            guard hasMoreFollowers else { return }
+            page += 1
+            getFollowers(in: page)
+        }
     }
 }

@@ -32,6 +32,9 @@
 		A469B16F241ADD0D00C1D53A /* GAAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469B16E241ADD0D00C1D53A /* GAAvatarImageView.swift */; };
 		A469B171241ADE9600C1D53A /* GANetworkImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469B170241ADE9600C1D53A /* GANetworkImageView.swift */; };
 		A469B173241AF08000C1D53A /* UIViewController+FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469B172241AF08000C1D53A /* UIViewController+FlowLayout.swift */; };
+		A469B175241AFDE600C1D53A /* UIViewController+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469B174241AFDE600C1D53A /* UIViewController+Loader.swift */; };
+		A489FA81241B02B500A5DB3D /* GAEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A489FA80241B02B500A5DB3D /* GAEmptyStateView.swift */; };
+		A489FA83241B049300A5DB3D /* UIViewController+EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A489FA82241B049200A5DB3D /* UIViewController+EmptyStateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		A469B16E241ADD0D00C1D53A /* GAAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAAvatarImageView.swift; sourceTree = "<group>"; };
 		A469B170241ADE9600C1D53A /* GANetworkImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GANetworkImageView.swift; sourceTree = "<group>"; };
 		A469B172241AF08000C1D53A /* UIViewController+FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+FlowLayout.swift"; sourceTree = "<group>"; };
+		A469B174241AFDE600C1D53A /* UIViewController+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loader.swift"; sourceTree = "<group>"; };
+		A489FA80241B02B500A5DB3D /* GAEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAEmptyStateView.swift; sourceTree = "<group>"; };
+		A489FA82241B049200A5DB3D /* UIViewController+EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+EmptyStateView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,7 @@
 				A41417192419C7B400830B6D /* GATitleLabel.swift */,
 				A414171B2419C85F00830B6D /* GABodyLabel.swift */,
 				A414171F2419CA8600830B6D /* GAContainerView.swift */,
+				A489FA80241B02B500A5DB3D /* GAEmptyStateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,7 +190,9 @@
 			isa = PBXGroup;
 			children = (
 				A41417212419CED100830B6D /* UIViewController+Alert.swift */,
+				A469B174241AFDE600C1D53A /* UIViewController+Loader.swift */,
 				A469B172241AF08000C1D53A /* UIViewController+FlowLayout.swift */,
+				A489FA82241B049200A5DB3D /* UIViewController+EmptyStateView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -384,10 +393,13 @@
 				A41417102419AF9F00830B6D /* FavoritesVC.swift in Sources */,
 				A469B15C2419DEFF00C1D53A /* Follower.swift in Sources */,
 				A469B173241AF08000C1D53A /* UIViewController+FlowLayout.swift in Sources */,
+				A489FA83241B049300A5DB3D /* UIViewController+EmptyStateView.swift in Sources */,
 				A41417202419CA8600830B6D /* GAContainerView.swift in Sources */,
 				A414170E2419AF9900830B6D /* SearchVC.swift in Sources */,
 				A469B15E2419DF5C00C1D53A /* User.swift in Sources */,
 				A469B16F241ADD0D00C1D53A /* GAAvatarImageView.swift in Sources */,
+				A489FA81241B02B500A5DB3D /* GAEmptyStateView.swift in Sources */,
+				A469B175241AFDE600C1D53A /* UIViewController+Loader.swift in Sources */,
 				A469B16A241ACFA000C1D53A /* NetworkManager.swift in Sources */,
 				A414171C2419C85F00830B6D /* GABodyLabel.swift in Sources */,
 				A41417162419B7EB00830B6D /* GAImageView.swift in Sources */,
